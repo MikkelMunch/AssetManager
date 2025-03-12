@@ -1,0 +1,112 @@
+/* CSS/styles.css */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    background-color: #333;
+    margin: 0;
+    height: 30vh; /* Adjust height as needed */
+    width: 100vw; /* Full viewport width */
+    z-index: 0; /* Lower z-index to allow overlap */
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the header without distortion */
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin: 0;
+    padding: 0 20px; /* Add padding to the sides */
+}
+
+main {
+    padding: 20px;
+    margin-top: 30vh; /* Ensure it does not overlap with the header */
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-y: auto;
+    height: calc(100vh - 30vh); /* Adjust height to fit within the viewport */
+}
+
+aside {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.content {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+aside h2 {
+    color: #333;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    margin: 10px 0;
+    padding: 0;
+    list-style: circle inside;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #eee;
+}
