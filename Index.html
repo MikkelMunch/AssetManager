@@ -69,11 +69,16 @@
         fetch(filePath)
             .then(response => response.text())
             .then(data => {
-                // Convert links, bold text, and line breaks
+                // Convert links, bold text, line breaks, and images
                 const formattedData = data
                     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>') // Convert [text](url) to <a href="url">text</a>
                     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>') // Convert **text** to <strong>text</strong>
-                    .replace(/\n/g, '<br>'); // Convert line breaks to <br>
+                    .replace(/\n/g, '<br>') // Convert line breaks to <br>
+                    .replace(/!\[([^\]]+)\]\(([^)]+)\)/g, (match, alt, url) => {
+                        // Handle relative paths for images
+                        const imagePath = url.startsWith('http') ? url : `pic/${url}`;
+                        return `<img src="${imagePath}" alt="${alt}">`;
+                    }); // Convert ![alt](url) to <img src="url" alt="alt">
                 document.getElementById(elementId).innerHTML = formattedData;
             })
             .catch(error => console.error(`Error fetching ${filePath}:`, error));
@@ -83,7 +88,6 @@
     fetchAndInsertContent('text/section2.txt', 'section2-content');
     fetchAndInsertContent('text/section3.txt', 'section3-content');
     fetchAndInsertContent('text/section4.txt', 'section4-content');
-
 </script>
 </body>
 </html>
