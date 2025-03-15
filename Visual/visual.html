@@ -1,0 +1,178 @@
+<!-- visual.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Asset Manager Transfer Methods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .diagram-container {
+            max-width: 1100px;
+            padding: 40px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 40px;
+        }
+
+        .center-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .center-node {
+            background-color: #0C0E1A;
+            border-radius: 20px;
+            padding: 30px;
+            width: 300px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .center-node h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .center-node p {
+            margin-top: 10px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .tool-card {
+            background-color: #0C0E1A;
+            border-radius: 16px;
+            padding: 25px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .tool-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .tool-card p {
+            margin: 0;
+            font-size: 13px;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .section-header {
+            padding: 10px 20px;
+            background-color: #9057A5;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .section-container {
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+<div class="diagram-container">
+
+
+    <div class="grid-container">
+        <!-- Visual Tools Section -->
+        <div class="section-container">
+            <div class="section-header">Visual Tools</div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>Web Interface</h3>
+                    <p>Browser-based platform for uploading, tagging, and organizing assets. Supports version history and drag-and-drop ingestion.</p>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Unity Editor Integration</h3>
+                    <p>Seamless upload and download between the Unity Editor and Asset Manager. Browse and preview cloud assets directly within the editor.</p>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Pixyz Studio</h3>
+                    <p>Import and optimize 3D scenes interactively, then upload directly to Asset Manager for storage and sharing.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programmatic Tools Section -->
+        <div class="section-container">
+            <div class="section-header">Programmatic Tools</div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>Pixyz SDK</h3>
+                    <p>Programmatic access for 3D asset transformation at scale. Provides mesh processing and automated optimization workflows.</p>
+                </div>
+
+                <div class="tool-card">
+                    <h3>REST API</h3>
+                    <p>Direct integration options for custom implementations and automation. Enables programmatic control over asset management workflows.</p>
+                </div>
+
+                <div class="tool-card">
+                    <h3>Unity Cloud Python SDK/CLI</h3>
+                    <p>Command-line tools for bulk operations and transfers. Supports CSV-based ingestion and automated validation for large-scale asset pipelines.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

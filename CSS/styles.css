@@ -1,13 +1,37 @@
 /* CSS/styles.css */
-html {
-    scroll-behavior: smooth;
-}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', 'Inter Fallback', ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 24px;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+}
+
+h1, h2, p,  {
+    font-family: 'Inter', 'Inter Fallback', ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    font-size: 34px;
+    line-height: 24px;
+}
+ ul, li {
+    font-family: 'Inter', 'Inter Fallback', ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Other existing styles */
+html {
+    scroll-behavior: smooth;
 }
 
 header {
@@ -31,36 +55,41 @@ header img {
 header h1 {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
     color: white;
     margin: 0;
     padding: 0 20px; /* Add padding to the sides */
+    font-size: 40px;
 }
 
 main {
-    padding: 20px;
-    margin-top: 30vh; /* Ensure it does not overlap with the header */
     display: flex;
-    flex-direction: column;
+    margin-top: 20px; /* Ensure it does not overlap with the header */
+    padding-left: 100px;
+    padding-right: 300px
 }
 
 .scroll-container {
-    display: flex;
+    flex-grow: 1;
     overflow-y: auto;
     height: calc(100vh - 30vh); /* Adjust height to fit within the viewport */
+    padding-left: 220px; /* Add padding to avoid overlap with aside */
 }
 
 aside {
+    position: fixed;
+    top: 30vh; /* Align with the bottom of the header */
+    left: 0;
     width: 200px;
+    height: 250px;; /* Adjust height to fit within the viewport */
     background-color: #f4f4f4;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
 .content {
-    flex-grow: 1;
-    padding-left: 20px;
+    padding: 20px;
 }
 
 aside h2 {
@@ -103,10 +132,26 @@ ul {
     margin: 10px 0;
     padding: 0;
     list-style: circle inside;
+    color: black;
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
     background: #eee;
+}
+/* CSS/styles.css */
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: dodgerblue;
+    text-decoration: underline;
 }

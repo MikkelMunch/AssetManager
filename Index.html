@@ -6,58 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profiling and Debugging Tools - Your Platform</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
     <img src="pic/Header.png" alt="Website Logo">
-    <h1>My Website Name</h1>
+    <h1>Asset Manager Transfer Methods</h1>
 </header>
 <main>
     <div class="scroll-container">
         <aside>
             <h2>Inventory List</h2>
-            <ul>
-                <li><a href="#intro">Introduction</a></li>
-                <li><a href="#profiling">Profiling Tools</a></li>
-                <li><a href="#debugging">Debugging Tools</a></li>
-                <li><a href="#resources">Additional Resources</a></li>
+            <ul id="headlines-list">
+                <!-- List items will be inserted here by JavaScript -->
             </ul>
         </aside>
         <div class="content">
             <section id="intro">
                 <h2>Introduction</h2>
-                <p>Profiling and debugging are essential practices for ensuring the performance and reliability of your applications. This guide will walk you through the tools available, key features, and how to optimize your applications for a seamless user experience.</p>
+                <div id="section1-content"></div>
             </section>
 
-            <section id="profiling">
-                <h2>Profiling Tools</h2>
-                <p>Profiling tools help you identify bottlenecks and optimize your app's performance.</p>
-                <ul>
-                    <li><strong>Profiler:</strong> Identify CPU, GPU, and memory usage in real-time.</li>
-                    <li><strong>Performance Benchmarking:</strong> Compare different configurations to optimize your code.</li>
-                    <li><strong>Frame Debugging:</strong> Analyze frame-by-frame rendering for deeper insights.</li>
-                </ul>
+            <section id="section2">
+                <h2>Transfer Methods</h2>
+                <iframe src="Visual/visual.html" width="100%" height="700px" style="border: none; margin-top: 0px;"></iframe>
+                <div id="section2-content"></div>   
             </section>
 
-            <section id="debugging">
-                <h2>Debugging Tools</h2>
-                <p>Debugging tools are essential for identifying and resolving issues in your application’s logic or performance.</p>
-                <ul>
-                    <li><strong>Console Log:</strong> Check debug logs and warnings to address runtime issues.</li>
-                    <li><strong>Breakpoints:</strong> Pause your application to inspect variables and flow.</li>
-                    <li><strong>Error Reporting:</strong> Analyze in-depth error reports for crash diagnostics.</li>
-                </ul>
+            <section id="section3">
+                <h2>The Asset Manager structure</h2>
+                <div id="section3-content"></div>
             </section>
 
-            <section id="resources">
-                <h2>Additional Resources</h2>
-                <p>Explore these resources to get deeper into profiling and debugging:</p>
-                <ul>
-                    <li><a href="https://unity.com/how-to/profiling-and-debugging-tools">Unity Profiling Documentation</a></li>
-                    <li><a href="https://docs.unity3d.com/Manual/Profiler.html">Unity Manual: Profiler</a></li>
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Debugging">MDN Debugging Tools</a></li>
-                </ul>
-            </section>
+           
         </div>
     </div>
 </main>
@@ -65,5 +46,44 @@
 <footer>
     <p>&copy; 2023 Your Platform Name | All rights reserved.</p>
 </footer>
+
+<script>
+    const headlines = [
+        { id: 'intro', text: 'Introduction' },
+        { id: 'section2', text: 'Transfer Methods' },
+        { id: 'section3', text: 'The Asset Manager structure' }
+    ];
+
+    const headlinesList = document.getElementById('headlines-list');
+
+    headlines.forEach(headline => {
+        const listItem = document.createElement('li');
+        const anchor = document.createElement('a');
+        anchor.href = `#${headline.id}`;
+        anchor.textContent = headline.text;
+        listItem.appendChild(anchor);
+        headlinesList.appendChild(listItem);
+    });
+
+    function fetchAndInsertContent(filePath, elementId) {
+        fetch(filePath)
+            .then(response => response.text())
+            .then(data => {
+                // Convert links, bold text, and line breaks
+                const formattedData = data
+                    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>') // Convert [text](url) to <a href="url">text</a>
+                    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>') // Convert **text** to <strong>text</strong>
+                    .replace(/\n/g, '<br>'); // Convert line breaks to <br>
+                document.getElementById(elementId).innerHTML = formattedData;
+            })
+            .catch(error => console.error(`Error fetching ${filePath}:`, error));
+    }
+
+    fetchAndInsertContent('text/section1.txt', 'section1-content');
+    fetchAndInsertContent('text/section2.txt', 'section2-content');
+    fetchAndInsertContent('text/section3.txt', 'section3-content');
+    fetchAndInsertContent('text/section4.txt', 'section4-content');
+
+</script>
 </body>
 </html>
