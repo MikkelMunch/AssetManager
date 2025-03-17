@@ -12,13 +12,53 @@ body {
     line-height: 1.6;
 }
 
+.tool-card {
+    background-color: #0C0E1A;
+    border-radius: 16px;
+    padding: 25px;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none; /* Remove default button border */
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.centered-h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0; /* Remove default margin */
+}
+.black-box {
+    background-color: #8f57a6; /* Set background color */
+    color: white;
+    padding: 20px; /* Optional: Add padding for better appearance */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
  .rounded-cropped-image {
      border-radius: 15px; /* Adjust the value for desired roundness */
      object-fit: cover; /* Crop the image to fit the container */
      width: 100%; /* Adjust the width as needed */
      height: 250px; /* Adjust the height as needed */
  }
-
+.rounded-cropped-image2 {
+    border-radius: 15px; /* Adjust the value for desired roundness */
+    object-fit: cover; /* Crop the image to fit the container */
+    width: 100%; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
+    object-position: top; /* Ensure the top of the image is always shown */
+}
 
 h1, h2, p,  {
     font-family: 'Inter', 'Inter Fallback', ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';

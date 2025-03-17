@@ -24,27 +24,52 @@
             </ul>
         </aside>
         <div class="content">
-            <section id="intro">
-                <h2>Introduction</h2>
+            <section id="intro" class="black-box">
+               
                 <div id="section1-content"></div>
             </section>
             <section id="section0">
-                <h2>Transfer Methods</h2>
-                <iframe src="Visual/visual.html" width="100%" height="680px" style="border: none; margin-top: 0px;"></iframe>
+                <iframe src="Visual/visual.html" width="100%" height="530px" style="border: none; margin-top: 0px;"></iframe>
 
                 <div id="section-content"></div>
             </section>
 
             <section id="section2">
-                <h2>Visual Tools</h2>
-                 <img src="pic/AM3.png" alt="Web Interface" class="rounded-cropped-image">
-                <div id="section2-content"></div>   
+                <h1 class="centered-h1">Visual Tools</h1>
+                <H3>Web Interface</H3>
+                <img src="pic/AM3.png" alt="Web Interface" class="rounded-cropped-image">
+                <div id="section2-content"></div>
+            </section>
+
+            <section id="section2.2">
+                <H3>Pixyz Studio Integration</H3>
+                <img src="pic/PixyzStudioIntegration2.png" alt="Pixyz Studio Integration" class="rounded-cropped-image2">
+                <div id="section2.2-content"></div>
+            </section>
+
+            <section id="section2.3">
+                <H3>Asset Manager for Unity Editor</H3>
+                <img src="pic/AMPackage.png" alt="Asset Manager for Unity Editor" class="rounded-cropped-image">
+                <div id="section2.3-content"></div>
             </section>
 
             <section id="section3">
-                <h2>Programmatic Tools</h2>
-                <img src="pic/SDK.png" alt="Pixyz SDK" class="rounded-cropped-image">
+                <h1 class="centered-h1">Programmatic Tools</h1>
+                <H3>Unity Cloud Python SDK</H3>
+                <img src="pic/pythonsdk.png" alt="Unity Cloud Python SDK" class="rounded-cropped-image2">
                 <div id="section3-content"></div>
+            </section>
+
+            <section id="section3.2">
+                <H3>Pixyz SDK</H3>
+                <img src="pic/AM3.png" alt="Web Interface" class="rounded-cropped-image">
+                <div id="section3.2-content"></div>
+            </section>
+
+            <section id="section3.3">
+                <H3>UNITY SDK & REST API</H3>
+                <img src="pic/AMSDK.png" alt="UNITY SDK & REST API" class="rounded-cropped-image">
+                <div id="section3.3-content"></div>
             </section>
 
            
@@ -95,8 +120,11 @@
 
     fetchAndInsertContent('text/section1.txt', 'section1-content');
     fetchAndInsertContent('text/section2.txt', 'section2-content');
+    fetchAndInsertContent('text/section2.2.txt', 'section2.2-content');
+    fetchAndInsertContent('text/section2.3.txt', 'section2.3-content');
     fetchAndInsertContent('text/section3.txt', 'section3-content');
-    fetchAndInsertContent('text/section4.txt', 'section4-content');
+    fetchAndInsertContent('text/section3.2.txt', 'section3.2-content');
+    fetchAndInsertContent('text/section3.3.txt', 'section3.3-content');
 </script>
 </body>
 </html>
