@@ -59,6 +59,13 @@ body {
     height: 250px; /* Adjust the height as needed */
     object-position: top; /* Ensure the top of the image is always shown */
 }
+.rounded-cropped-image3 {
+    border-radius: 15px; /* Adjust the value for desired roundness */
+    object-fit: cover; /* Crop the image to fit the container */
+    width: 100%; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    object-position: top 
+}
 
 h1, h2, p,  {
     font-family: 'Inter', 'Inter Fallback', ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
