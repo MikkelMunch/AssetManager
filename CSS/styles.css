@@ -67,7 +67,7 @@ body {
     object-position: top 
 }
 
-h1, h2, p,  {
+h1, h2, p  {
     font-family: 'Inter', 'Inter Fallback', ui-sans-serif, system-ui, -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     font-weight: 500;
     font-style: normal;
@@ -137,7 +137,7 @@ aside {
     top: 30vh; /* Align with the bottom of the header */
     left: 0;
     width: 200px;
-    height: 250px;; /* Adjust height to fit within the viewport */
+    height: 350px;; /* Adjust height to fit within the viewport */
     background-color: #f4f4f4;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
@@ -158,6 +158,9 @@ aside ul {
 
 aside ul li {
     margin: 10px 0;
+}
+aside a {
+    text-decoration: none;
 }
 
 nav ul {
@@ -188,6 +191,7 @@ ul {
     padding: 0;
     list-style: circle inside;
     color: black;
+  
 }
 
 footer {
